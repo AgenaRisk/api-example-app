@@ -38,6 +38,16 @@
 				<groupId>org.codehaus.mojo</groupId> 
 				<artifactId>exec-maven-plugin</artifactId> 
 				<version>1.6.0</version> 
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>example.Demo</mainClass>
+				</configuration>
 			</plugin>
 			
 			<!--Download non-Java dependencies to Lib during Clean phase-->

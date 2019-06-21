@@ -2,7 +2,7 @@
 
 ## Initialization
 
-git clone git@github.com:AgenaRisk/api-example-app.git
+git clone https://github.com/AgenaRisk/api-example-app.git
 
 cd api-example-app
 
@@ -10,7 +10,7 @@ mvn clean compile
 
 ## Launch Example
 
-mvn exec:java '-Dexec.mainClass="example.Demo"'
+mvn exec:java
 
 ## Notes
 
