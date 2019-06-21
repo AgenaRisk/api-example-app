@@ -2,15 +2,19 @@
 
 ## Initialization
 
+~~~~
 git clone https://github.com/AgenaRisk/api-example-app.git
-
 cd api-example-app
-
 mvn clean compile
+~~~~
 
 ## Launch Example
 
+~~~~
 mvn exec:java
+~~~~
+
+If you want to launch from terminal with another main class, add `'-Dexec.mainClass="example.Demo"'` argument to the `mvn exec:java` command, where `example.Demo` is your main package and class.
 
 ## Notes
 
