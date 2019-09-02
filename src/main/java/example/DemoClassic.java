@@ -37,10 +37,10 @@ import uk.co.agena.minerva.util.model.SampleDataGenerator;
  * @author Norman Fenton
  * @author Eugene Dementiev
  */
-public class ClassicDemo {
+public class DemoClassic {
 
     public static void main(String args[]) {
-        ClassicDemo ex = new ClassicDemo();
+        DemoClassic ex = new DemoClassic();
         ex.createSaveLoadSimpleModel();
         ex.editStates();
         ex.nptManipulation();
