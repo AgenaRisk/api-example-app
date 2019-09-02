@@ -33,6 +33,11 @@ mvn exec:java@activate '-Dexec.args="--keyActivate 1234-ABCD-5678-EFGH"'
 ~~~~
 For more details on activation, see [API Readme](https://github.com/AgenaRisk/api/blob/master/README.md).
 
+To see a list of available activation commands, use:
+~~~~
+mvn exec:java@activate '-Dexec.args="-h"'
+~~~~
+
 ## Notes
 
 * The project requires non-Java libraries to run
