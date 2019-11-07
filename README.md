@@ -26,12 +26,8 @@ You can launch the project with your own main class by running command with your
 mvn exec:java@custom '-Dexec.mainClass="my.main.NewClass"'
 ~~~~
 
-## Activation
-You can activate AgenaRisk 10 Developer by running the following command with your valid license key:
-~~~~
-mvn exec:java@activate '-Dexec.args="--keyActivate 1234-ABCD-5678-EFGH"'
-~~~~
-For more details on activation, see [API Readme](https://github.com/AgenaRisk/api/blob/master/README.md).
+## License Activation
+See [API Readme](https://github.com/AgenaRisk/api/blob/master/README.md) for activation instructions.
 
 To see a list of available activation commands, use:
 ~~~~
