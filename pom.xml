@@ -97,6 +97,7 @@
 						<configuration>
 							<url>https://resources.agenarisk.com/products/developer</url>
 							<toDir>${project.basedir}/lib</toDir>
+							<serverId>resources.agenarisk.com</serverId>
 						</configuration>
 					</execution>
 
