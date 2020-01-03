@@ -11,7 +11,7 @@ public class Demo {
 
 	public static void main(String[] args) throws Exception {
 
-		String modelFilePath = new File(ClassLoader.getSystemClassLoader().getResource("example/Asia.xml").getFile()).getAbsolutePath();
+		String modelFilePath = new File(Demo.class.getClassLoader().getResource("example/Asia.xml").getFile()).getAbsolutePath();
 
 		// Load and calculate the model
 		Model model = Model.loadModel(modelFilePath);
