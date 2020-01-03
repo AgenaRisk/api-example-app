@@ -1,5 +1,9 @@
 # Example App using AgenaRisk 10 Java API
 
+## Prerequisites
+* JDK 8 (we recommend jdk1.8.0_192)
+* (Linux: net-tools, iproute2)
+
 ## Initialization
 Run the following commands in the terminal:
 ~~~~
