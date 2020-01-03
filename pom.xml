@@ -52,12 +52,12 @@
 
 					<!--Launch new demo-->
 					<execution>
-						<id>demo-classic</id>
+						<id>demo-legacy</id>
 						<goals>
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>example.DemoClassic</mainClass>
+							<mainClass>example.DemoLegacy</mainClass>
 						</configuration>
 					</execution>
 

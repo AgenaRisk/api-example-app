@@ -10,14 +10,14 @@ mvn clean compile
 
 ## Launch Example
 
-### New API Demo
+### API Demo
 ~~~~
 mvn exec:java@demo
 ~~~~
 
-### Classic API Demo
+### Legacy API Demo
 ~~~~
-mvn exec:java@demo-classic
+mvn exec:java@demo-legacy
 ~~~~
 
 ### Custom Main Class

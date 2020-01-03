@@ -1,4 +1,4 @@
-package example;
+package example.legacy;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,10 +37,10 @@ import uk.co.agena.minerva.util.model.SampleDataGenerator;
  * @author Norman Fenton
  * @author Eugene Dementiev
  */
-public class DemoClassic {
+public class DemoLegacy {
 
     public static void main(String args[]) {
-        DemoClassic ex = new DemoClassic();
+        DemoLegacy ex = new DemoLegacy();
         ex.createSaveLoadSimpleModel();
         ex.editStates();
         ex.nptManipulation();
