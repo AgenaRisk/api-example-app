@@ -37,6 +37,10 @@ To see a list of available activation commands, use:
 ~~~~
 mvn exec:java@activate '-Dexec.args="-h"'
 ~~~~
+If using Windows CMD, the quotation marks should be used as follows:
+~~~~
+mvn exec:java@activate "-Dexec.args=\"-h\""
+~~~~
 
 ## Notes
 
