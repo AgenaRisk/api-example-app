@@ -1,8 +1,9 @@
 # Example App using AgenaRisk 10 Java API
 
 ## Prerequisites
-* JDK 8 (we recommend jdk1.8.0_192)
-* (Linux: net-tools, iproute2)
+* JDK 8<br>We recommend jdk1.8.0_192
+* Maven<br>Version 3.6.1 or 3.6.2; wagon-maven-plugin:download is broken in 3.6.3
+* Linux: net-tools, iproute2
 
 ## Initialization
 Run the following commands in the terminal:
