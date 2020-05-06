@@ -1,8 +1,15 @@
 # Example App using AgenaRisk 10 Java API
 
+## Documentation
+[JavaDoc](https://agenarisk.github.io/api/)
+
 ## Prerequisites
-* JDK 8<br>We recommend jdk1.8.0_192
-* Maven<br>Version 3.6.1 or 3.6.2; wagon-maven-plugin:download is broken in 3.6.3
+* JDK 8
+<br>We recommend jdk1.8.0_192
+<br>Note: versions of Java above 8 have not been tested
+* Maven
+<br>Version 3.6.1 or 3.6.2
+<br>Note: `wagon-maven-plugin:download` is broken in Maven 3.6.3
 * Linux: net-tools, iproute2
 
 ## Initialization
@@ -34,7 +41,7 @@ mvn exec:java@custom '-Dexec.mainClass="my.main.NewClass"'
 ## License Activation
 See [API Readme](https://github.com/AgenaRisk/api/blob/master/README.md) for activation instructions.
 
-To see a list of available activation commands, use:
+To see a list of available activation commands, use (Linux shell or Windows Powershell):
 ~~~~
 mvn exec:java@activate '-Dexec.args="-h"'
 ~~~~
@@ -45,7 +52,9 @@ mvn exec:java@activate "-Dexec.args=\"-h\""
 
 ## Notes
 
+
 * The project requires non-Java libraries to run
 * Perform `mvn clean` to trigger downloading these libraries into `project/lib` directory
 * On build, these will also be copied to `target/lib`
 * Valid AgenaRisk Developer license (or a currently active Timed Trial) will be required to run this example
+* You can also checkout the project with [TortoiseSVN](https://tortoisesvn.net/) and use an IDE like [NetBeans](https://netbeans.apache.org/download/) if you don't want to use the CLI approach
