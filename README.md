@@ -52,9 +52,9 @@ mvn exec:java@activate "-Dexec.args=\"-h\""
 
 ## Notes
 
-
 * The project requires non-Java libraries to run
 * Perform `mvn clean` to trigger downloading these libraries into `project/lib` directory
 * On build, these will also be copied to `target/lib`
+* If you are working with SNAPSHOT dependencies, then some dependencies may have to be re-downloaded by executing `mvn dependency:purge-local-repository`
 * Valid AgenaRisk Developer license (or a currently active Timed Trial) will be required to run this example
 * You can also checkout the project with [TortoiseSVN](https://tortoisesvn.net/) and use an IDE like [NetBeans](https://netbeans.apache.org/download/) if you don't want to use the CLI approach
