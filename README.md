@@ -8,8 +8,7 @@
 <br>We recommend jdk1.8.0_192
 <br>Note: versions of Java above 8 have not been tested
 * Maven
-<br>Version 3.6.1 or 3.6.2
-<br>Note: `wagon-maven-plugin:download` is broken in Maven 3.6.3
+<br>Version >= 3.6.1
 * Linux: net-tools, iproute2
 
 ## Initialization
