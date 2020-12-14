@@ -11,7 +11,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<version.com.agenarisk.core>master-SNAPSHOT</version.com.agenarisk.core>
-		<version.com.agenarisk.api>[0-SNAPSHOT,)</version.com.agenarisk.api>
+		<version.com.agenarisk.api>[0.975-SNAPSHOT,)</version.com.agenarisk.api>
 	</properties>
 
 	<dependencies>
