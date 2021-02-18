@@ -37,6 +37,11 @@ You can launch the project with your own main class by running command with your
 mvn exec:java@custom '-Dexec.mainClass="my.main.NewClass"'
 ~~~~
 
+For Linux bash:
+~~~~
+mvn exec:java@custom '-Dexec.mainClass=my.main.NewClass'
+~~~~
+
 ## License Activation
 See [API Readme](https://github.com/AgenaRisk/api/blob/master/README.md) for activation instructions.
 
