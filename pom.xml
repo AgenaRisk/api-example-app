@@ -11,7 +11,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<version.com.agenarisk.core>master-SNAPSHOT</version.com.agenarisk.core>
-		<version.com.agenarisk.api>[0.975-SNAPSHOT,)</version.com.agenarisk.api>
+		<version.com.agenarisk.api>[0.991-SNAPSHOT,)</version.com.agenarisk.api>
 	</properties>
 
 	<dependencies>
@@ -57,7 +57,7 @@
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>example.DemoLegacy</mainClass>
+							<mainClass>example.legacy.DemoLegacy</mainClass>
 						</configuration>
 					</execution>
 
@@ -106,28 +106,40 @@
 				<version>1.6.0</version>
 				<executions>
 					<execution>
-						<id>download-product</id>
-						<phase>clean</phase>
-						<goals>
-							<goal>wget</goal>
-						</goals>
-						<configuration>
-							<url>https://resources.agenarisk.com/products/zip/developer.zip</url>
-							<outputDirectory>${project.basedir}/lib</outputDirectory>
-							<unpack>true</unpack>
-							<overwrite>true</overwrite>
-						</configuration>
-					</execution>
-					<execution>
 						<id>download-cryptlex</id>
 						<phase>clean</phase>
 						<goals>
 							<goal>wget</goal>
 						</goals>
 						<configuration>
-							<url>https://resources.agenarisk.com/download/archive/lib.zip</url>
+							<url>https://resources.agenarisk.com/download/archive/lib-v3.zip</url>
 							<outputDirectory>${project.basedir}/lib</outputDirectory>
 							<unpack>true</unpack>
+							<overwrite>true</overwrite>
+						</configuration>
+					</execution>
+					<execution>
+						<id>download-product-v2</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>wget</goal>
+						</goals>
+						<configuration>
+							<url>https://resources.agenarisk.com/products/zip/developer.zip</url>
+							<outputDirectory>${project.basedir}/lib/</outputDirectory>
+							<unpack>true</unpack>
+							<overwrite>true</overwrite>
+						</configuration>
+					</execution>
+					<execution>
+						<id>download-product-v3</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>wget</goal>
+						</goals>
+						<configuration>
+							<url>https://resources.agenarisk.com/products/v3/developer/product.json</url>
+							<outputDirectory>${project.basedir}/lib/</outputDirectory>
 							<overwrite>true</overwrite>
 						</configuration>
 					</execution>
