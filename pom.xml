@@ -10,8 +10,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<version.com.agenarisk.core>master-SNAPSHOT</version.com.agenarisk.core>
-		<version.com.agenarisk.api>[0.991-SNAPSHOT,)</version.com.agenarisk.api>
+		<version.com.agenarisk.core>8157</version.com.agenarisk.core>
+		<version.com.agenarisk.api>0.991</version.com.agenarisk.api>
+		<!--<version.com.agenarisk.core>master-SNAPSHOT</version.com.agenarisk.core>-->
+		<!--<version.com.agenarisk.api>[0.991-SNAPSHOT,)</version.com.agenarisk.api>-->
 	</properties>
 
 	<dependencies>
