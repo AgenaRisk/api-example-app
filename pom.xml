@@ -3,15 +3,15 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>com.example.app</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<version.com.agenarisk.core>8157</version.com.agenarisk.core>
-		<version.com.agenarisk.api>0.991</version.com.agenarisk.api>
+		<version.com.agenarisk.core>8186</version.com.agenarisk.core>
+		<version.com.agenarisk.api>0.992</version.com.agenarisk.api>
 		<!--<version.com.agenarisk.core>master-SNAPSHOT</version.com.agenarisk.core>-->
 		<!--<version.com.agenarisk.api>[0.991-SNAPSHOT,)</version.com.agenarisk.api>-->
 	</properties>
