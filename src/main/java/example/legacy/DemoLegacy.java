@@ -40,12 +40,12 @@ import uk.co.agena.minerva.util.model.SampleDataGenerator;
 public class DemoLegacy {
 
     public static void main(String args[]) {
-        DemoLegacy ex = new DemoLegacy();
-        ex.createSaveLoadSimpleModel();
-        ex.editStates();
-        ex.nptManipulation();
-		ex.learnTablesWithExpertJudgement();
-        ex.learnTablesWithExpertJudgementForIndividualNodes();
+        DemoLegacy example = new DemoLegacy();
+        example.createSaveLoadSimpleModel();
+        example.editStates();
+        example.nptManipulation();
+		example.learnTablesWithExpertJudgement();
+        example.learnTablesWithExpertJudgementForIndividualNodes();
     }
 
     public void createSaveLoadSimpleModel() {
@@ -53,7 +53,7 @@ public class DemoLegacy {
             Model myModel = Model.createEmptyModel();
             // First get the single BN
             ExtendedBN ebn = myModel.getExtendedBNAtIndex(0);
-        // Add a new node of type Boolean to this BN;
+			// Add a new node of type Boolean to this BN;
             // its identifier is “b” ands its name is “B”
 
             BooleanEN booleanNode = ebn.addBooleanNode("b", "B");
@@ -66,11 +66,11 @@ public class DemoLegacy {
             Model m = Model.load("test.cmp");
 
         } catch (Exception e) {
+			e.printStackTrace();
         };
     }
 
     public void editStates() {
-
         try {
             Model m = Model.createEmptyModel();
             // First get the single BN
@@ -128,16 +128,16 @@ public class DemoLegacy {
             rds.addLabelledDataPoint("Good");
             ren.createExtendedStates(rds);
 
-        //Finally save the model
+			//Finally save the model
             m.save("test.cmp");
-
         } catch (Exception e) {
+			e.printStackTrace();
         };
     }
 
     public void nptManipulation() {
         try {
-             // Load the model that was created and saved 
+            // Load the model that was created and saved 
             // in the method editStates
             Model m = Model.load("test.cmp");
 
@@ -173,22 +173,19 @@ public class DemoLegacy {
             {0.3, 0.3, 0.4},
             {0.5, 0.4, 0.1}}, lenParents);
 
-               //Save the model:
+            //Save the model:
             m.save("test.cmp");
-
         } //try
         catch (Exception e) {
+			e.printStackTrace();
         };
-
     } //nptManipulation
 
     public void printMarginals(Model m, ExtendedBN ebn, ExtendedNode enode) {
-
         // Get the Marginals for the node
-        MarginalDataItemList mdil
-                = m.getMarginalDataStore().getMarginalDataItemListForNode(ebn, enode);
+        MarginalDataItemList mdil = m.getMarginalDataStore().getMarginalDataItemListForNode(ebn, enode);
 
-	// There’s only one scenario, so get the first 
+		// There’s only one scenario, so get the first 
         // MarginalDataItem in the list
         MarginalDataItem mdi = mdil.getMarginalDataItemAtIndex(0);
 
@@ -198,16 +195,13 @@ public class DemoLegacy {
         List marginals = mdi.getDataset().getDataPoints();
         for (int i = 0; i < marginals.size(); i++) {
             DataPoint marginal = (DataPoint) marginals.get(i);
-            System.out.println(marginal.getLabel()
-                    + " = "
-                    + marginal.getValue());
+            System.out.println(marginal.getLabel() + " = " + marginal.getValue());
         }
         //Print the mean of the distribution
         System.out.println("Mean = " + mdi.getMeanValue());
 
         //get the variance of the distribution
         System.out.println("Variance = " + mdi.getVarianceValue());
-
     }
 
     public void workingWithEvidence() {
@@ -228,6 +222,7 @@ public class DemoLegacy {
             printMarginals(m, ebn, cien);
 
         } catch (Exception e) {
+			e.printStackTrace();
         };
     } //workingWithEvidence
 
@@ -270,8 +265,8 @@ public class DemoLegacy {
 
             //save the model:
             m.save("test.cmp");
-
         } catch (Exception e) {
+			e.printStackTrace();
         };
     } //enteringEvidence
 
@@ -313,8 +308,8 @@ public class DemoLegacy {
 
             //save the model so you can inspect it in AgenaRisk:
             m.save("test2.cmp");
-
         } catch (Exception e) {
+			e.printStackTrace();
         };
     }//testSimpleExpression
 
@@ -349,8 +344,7 @@ public class DemoLegacy {
             List uniformParameters = new ArrayList();
             uniformParameters.add("0.0"); //lower bound
             uniformParameters.add("10000000000.0"); //upper bound
-            ExtendedNodeFunction uniform
-                    = new ExtendedNodeFunction(Uniform.displayName, uniformParameters);
+            ExtendedNodeFunction uniform = new ExtendedNodeFunction(Uniform.displayName, uniformParameters);
             a.setExpression(uniform);
             b.setExpression(uniform);
 
@@ -380,8 +374,8 @@ public class DemoLegacy {
 
             //Save the model:
             m.save("test3.cmp");
-
         } catch (Exception e) {
+			e.printStackTrace();
         };
     }//testExpressionWithParent
 
@@ -418,18 +412,18 @@ public class DemoLegacy {
             b.setPartitionedExpressionModelNodes(modelNodes);
             modelNodes.add(a);
 
-                //Next we create a partitioned expression for each state of A. 
+            //Next we create a partitioned expression for each state of A. 
             //First we need a List to store the expressions we will create:
             List expressions = new ArrayList();
             b.setPartitionedExpressions(expressions);
 
-                //Create the expression Normal(10, 100) for the first state (Red):
+            //Create the expression Normal(10, 100) for the first state (Red):
             List redParameters = new ArrayList();
             redParameters.add("10");
             redParameters.add("100");
             expressions.add(new ExtendedNodeFunction(Normal.displayName, redParameters));
 
-                //Create the expression Normal(25, 100) for second state (Amber):
+            //Create the expression Normal(25, 100) for second state (Amber):
             List amberParameters = new ArrayList();
             amberParameters.add("25");
             amberParameters.add("100");
@@ -468,8 +462,8 @@ public class DemoLegacy {
 
             //save the file:
             m.save("test4.cmp");
-
         } catch (Exception e) {
+			e.printStackTrace();
         };
     }//testPartitionedExpression
 
@@ -487,7 +481,7 @@ public class DemoLegacy {
             //This time we want to create a new BN called “Two”:
             ExtendedBN two = m.addExtendedBN("Two", "Second BN");
 
-                //Use  method populateSimpleExtendedBN to populate both BNs:
+            //Use  method populateSimpleExtendedBN to populate both BNs:
             populateSimpleExtendedBN(one);
             populateSimpleExtendedBN(two);
 
@@ -513,13 +507,12 @@ public class DemoLegacy {
 
             //save the model
             m.save("test5.cmp");
-
         } catch (Exception e) {
+			e.printStackTrace();
         };
     }//testBNOs
 
     private void populateSimpleExtendedBN(ExtendedBN ebn) throws Exception {
-
         // Create two nodes, A and B, and a child C
         ContinuousIntervalEN a = ebn.addContinuousIntervalNode("a", "A");
         ContinuousIntervalEN b = ebn.addContinuousIntervalNode("b", "B");
@@ -529,8 +522,7 @@ public class DemoLegacy {
 
         List parameters = new ArrayList();
         parameters.add("a + b");
-        ExtendedNodeFunction enf = new ExtendedNodeFunction(
-                Arithmetic.displayName, parameters);
+        ExtendedNodeFunction enf = new ExtendedNodeFunction(Arithmetic.displayName, parameters);
         c.setExpression(enf);
 
         //For the node c redefine its states
@@ -591,10 +583,11 @@ public class DemoLegacy {
                 writer.writeAll(sampleData);
             } catch (IOException ex) {
                 //custom exception handling for problems with saving data file
+				ex.printStackTrace();
             }
-            
         } catch (FileHandlingException ex) {           
             //custom exception handling for problems with saving data file
+			ex.printStackTrace();
         }
 
     }
@@ -605,7 +598,6 @@ public class DemoLegacy {
      * @throws Exception
      */
     private void learnTablesPurelyFromData() {
-
         try {
             //Load example model
 			Path examplesDirectoryPath = Paths.get(Config.getDirectoryHomeAgenaRisk(), "Model Library", "Advanced", "Learning from Data");
@@ -642,18 +634,20 @@ public class DemoLegacy {
             
             //Save learnt model
             m.save("model_learnt_purely_from_data.cmp");
-
         } catch (FileHandlingException | IOException | CoreBNException | CoreBNInconsistentEvidenceException | PropagationException | MessagePassingLinkException | PropagationTerminatedException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (InconsistentDataVsModelStatesException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (ExtendedBNException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         }
 		catch (EMLearningException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         }
-
     }
 
     /**
@@ -661,7 +655,6 @@ public class DemoLegacy {
      * ExtendedBN)
      */
     private void learnTablesWithExpertJudgement() {
-
         try {
 			//Load example model
 			Path examplesDirectoryPath = Paths.get(Config.getDirectoryHomeAgenaRisk(), "Model Library", "Advanced", "Learning from Data");
@@ -698,17 +691,19 @@ public class DemoLegacy {
             
             //Save learnt model
             m.save("model_learnt_from_data_and_expert_judgement.cmp");
-
         } catch (FileHandlingException | IOException | CoreBNException | CoreBNInconsistentEvidenceException | PropagationException | MessagePassingLinkException | PropagationTerminatedException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (InconsistentDataVsModelStatesException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (ExtendedBNException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (EMLearningException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         }
-
     }
 
     /**
@@ -771,17 +766,19 @@ public class DemoLegacy {
             
             //Save learnt model
             m.save("model_learnt_from_data_and_expert_judgement_individual_nodes.cmp");
-
         } catch (FileHandlingException | IOException | CoreBNException | CoreBNInconsistentEvidenceException | PropagationException | MessagePassingLinkException | PropagationTerminatedException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (InconsistentDataVsModelStatesException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (ExtendedBNException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         } catch (EMLearningException ex) {
-            //custom exception handling 
+            //custom exception handling
+			ex.printStackTrace();
         }
-
     }
 
 }
