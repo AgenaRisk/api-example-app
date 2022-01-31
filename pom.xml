@@ -3,17 +3,13 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>com.example.app</artifactId>
-	<version>0.1</version>
+	<version>0.2</version>
 	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<version.com.agenarisk.core>8186</version.com.agenarisk.core>
-		<version.com.agenarisk.api>0.992</version.com.agenarisk.api>
-		<!--<version.com.agenarisk.core>master-SNAPSHOT</version.com.agenarisk.core>-->
-		<!--<version.com.agenarisk.api>[0.991-SNAPSHOT,)</version.com.agenarisk.api>-->
 	</properties>
 
 	<dependencies>
@@ -21,13 +17,13 @@
 		<dependency>
 			<groupId>com.agenarisk</groupId>
 			<artifactId>com.agenarisk.core</artifactId>
-			<version>${version.com.agenarisk.core}</version>
+			<version>8294</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.agenarisk</groupId>
 			<artifactId>com.agenarisk.api</artifactId>
-			<version>${version.com.agenarisk.api}</version>
+			<version>0.993</version>
 		</dependency>
 
 	</dependencies>
