@@ -1,0 +1,11 @@
+DataSet,A,S,X,D
+ds1,,no,no,no
+ds2,yes,,no,no
+ds3,yes,no,,yes
+ds4,no,no,no,
+ds5,no,no,,no
+ds6,no,,no,yes
+ds7,,no,yes,yes
+ds8,yes,,yes,yes
+ds9,yes,no,,yes
+ds10,yes,no,no,
