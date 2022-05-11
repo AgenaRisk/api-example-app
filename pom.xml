@@ -3,7 +3,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>com.example.app</artifactId>
-	<version>0.21</version>
+	<version>0.22</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -17,13 +17,13 @@
 		<dependency>
 			<groupId>com.agenarisk</groupId>
 			<artifactId>com.agenarisk.core</artifactId>
-			<version>8294</version>
+			<version>8603</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.agenarisk</groupId>
 			<artifactId>com.agenarisk.api</artifactId>
-			<version>0.993</version>
+			<version>0.998</version>
 		</dependency>
 
 	</dependencies>
