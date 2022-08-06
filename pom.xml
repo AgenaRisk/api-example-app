@@ -3,7 +3,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>com.example.app</artifactId>
-	<version>0.22</version>
+	<version>0.23</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -17,13 +17,13 @@
 		<dependency>
 			<groupId>com.agenarisk</groupId>
 			<artifactId>com.agenarisk.core</artifactId>
-			<version>8603</version>
+			<version>8877</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.agenarisk</groupId>
 			<artifactId>com.agenarisk.api</artifactId>
-			<version>0.998</version>
+			<version>1.001</version>
 		</dependency>
 
 	</dependencies>
@@ -114,6 +114,7 @@
 							<outputDirectory>${project.basedir}/lib</outputDirectory>
 							<unpack>true</unpack>
 							<overwrite>true</overwrite>
+							<md5>1fd9e1bce419e8fd8763f3a19ce563e1</md5>
 						</configuration>
 					</execution>
 					<execution>
